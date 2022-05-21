@@ -66,8 +66,9 @@ public class Tutorial : MonoBehaviour
         new TutorialStep("isTouchingKeyFirst"),
         new TutorialStep("isHoldingKeyFirst"),
         new TutorialStep("isScrewOneScrewed"),
-        new TutorialStep("isKeyBackOverTableFirst"),
+        new TutorialStep("isKeyBackOverTableFirst",2),
         new TutorialStep("isKeyLetGoFirst",3),
+        // key aligned on the table, key not being held, screw has been turned
 
         new TutorialStep("isTouchingYellowPipe"),
         new TutorialStep("isHoldingYellowPipe"),
@@ -82,8 +83,9 @@ public class Tutorial : MonoBehaviour
         new TutorialStep("isTouchingKeySecond"),
         new TutorialStep("isHoldingKeySecond"),
         new TutorialStep("isScrewTwoScrewed"),
-        new TutorialStep("isKeyBackOverTableSecond"),
+        new TutorialStep("isKeyBackOverTableSecond",2),
         new TutorialStep("isKeyLetGoSecond",3),
+        // key aligned on the table, key not being held, screw has been turned
     };
     
     #region handleConstraints
@@ -151,6 +153,7 @@ public class Tutorial : MonoBehaviour
 
     public void isKeyAligned(bool isAligned)
     {
+        /*
         SetConstraintByName( isAligned && tutorialIndex >= nameIndex("isKeyBackOverTableFirst") && tutorialIndex <= nameIndex("isKeyLetGoFirst"),
             "isKeyBackOverTableFirst");
         SetConstraintByName( isAligned && tutorialIndex >= nameIndex("isKeyBackOverTableFirst") && tutorialIndex <= nameIndex("isKeyLetGoFirst"),
@@ -159,6 +162,12 @@ public class Tutorial : MonoBehaviour
          "isKeyBackOverTableSecond");
         SetConstraintByName( isAligned && tutorialIndex >= nameIndex("isKeyBackOverTableSecond") && tutorialIndex <= nameIndex("isKeyLetGoSecond"),
          "isKeyLetGoSecond");
+        */
+        // the third constraint which verifies that the turn step has been done should be sufficient
+        SetConstraintByName( isAligned, "isKeyBackOverTableFirst");
+        SetConstraintByName( isAligned, "isKeyLetGoFirst");
+        SetConstraintByName( isAligned, "isKeyBackOverTableSecond");
+        SetConstraintByName( isAligned, "isKeyLetGoSecond");
     }
 
     public void isKeyHeld(bool isHeld)
@@ -243,20 +252,35 @@ public class Tutorial : MonoBehaviour
         if (instructionIndex == 0 && subStepState == PlayInstructions.InstructionSubStepState.InsertScrew)
             SatisfyConstraintByName("isBluePipeAttached");
         if (instructionIndex == 0 && subStepState == PlayInstructions.InstructionSubStepState.UseKey)
+        {
             SatisfyConstraintByName("isScrewOneIn");
+            // suspend the key hint *as soon as the instructionStep says we can start using it.
+            keyHint.doSuspendHint = true;
+        }
+        
         if (instructionIndex == 1 && subStepState == PlayInstructions.InstructionSubStepState.AttachPiece)
         {
+            // re-enable the key hint *as soon as the instructionStep says you're done.
+            keyHint.doSuspendHint = false;
             SatisfyConstraintByName("isScrewOneScrewed");
+            SatisfyConstraintByName("isKeyBackOverTableFirst", 1);
             SatisfyConstraintByName("isKeyLetGoFirst", 2);
         }
 
         if (instructionIndex == 1 && subStepState == PlayInstructions.InstructionSubStepState.InsertScrew)
             SatisfyConstraintByName("isYellowPipeAttached");
         if (instructionIndex == 1 && subStepState == PlayInstructions.InstructionSubStepState.UseKey)
+        {
             SatisfyConstraintByName("isScrewTwoIn");
+            // suspend the key hint *as soon as the instructionStep says we can start using it.
+            keyHint.doSuspendHint = true;
+        }
         if (instructionIndex == 2)
         {
+            // re-enable the key hint *as soon as the instructionStep says you're done.
+            keyHint.doSuspendHint = false;
             SatisfyConstraintByName("isScrewTwoScrewed");
+            SatisfyConstraintByName("isKeyBackOverTableSecond", 1);
             SatisfyConstraintByName("isKeyLetGoSecond", 2);
         }
     }

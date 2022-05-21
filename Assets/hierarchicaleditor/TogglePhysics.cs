@@ -13,6 +13,8 @@ public class TogglePhysics : MonoBehaviour
     private bool hasBeenToldToStayOn = false;
     private List<Collider> collidersToToggle = new List<Collider>();
     private Interactable interactable;
+    public bool toggleCollidersAlso = false;
+    private int originalLayer;
 
     // direct access to rigidbody has been fully deprecated (throws NotSupportedException)
     // hiding UnityEngine.component.rigidbody is perfectly fine.
@@ -26,6 +28,7 @@ public class TogglePhysics : MonoBehaviour
         if (physicsOffShortlyAfterStart) StartCoroutine(sleepAfterStart());
         collidersToToggle = GetComponents<Collider>().Where(c => c.enabled).ToList();
         interactable = GetComponent<Interactable>();
+        originalLayer = gameObject.layer;
 
     }
     
@@ -42,16 +45,21 @@ public class TogglePhysics : MonoBehaviour
         toSet = toSet ?? !rigidbody.detectCollisions;
         var value = toSet.Value;
         hasBeenToldToStayOn = value;
-        rigidbody.detectCollisions = value;
+        //rigidbody.detectCollisions = value;
+        gameObject.layer = value ? originalLayer : originalLayer + 1;
         rigidbody.useGravity = value;
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
         // Toggling the colliders and the Interactable might be overkill, but 
         // Looking into SteamVR Hand, it seems that it might check overlapped colliders irrespective.
-        foreach (var c in collidersToToggle)
+        if (toggleCollidersAlso)
         {
-            c.enabled = value;
+            foreach (var c in collidersToToggle)
+            {
+                c.enabled = value;
+            }
         }
+
         if (interactable != null) interactable.enabled = value;
 
 

@@ -16,6 +16,9 @@ public class AssemblyEventLogger : EventLogger
         get => _lineOutBuilder ??= new StringBuilder();
         set => _lineOutBuilder = value;
     }
+
+    public override string loggerNameForMetadata => "assembly event logging";
+    protected override string specificLoggingDirectory => Path.Combine(loggingDirectory,"Assembly");
     
     public override void StartLogging()
     {

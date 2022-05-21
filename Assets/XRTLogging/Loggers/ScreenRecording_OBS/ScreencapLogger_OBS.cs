@@ -131,16 +131,21 @@ namespace XRTLogging
 
         private void OnApplicationQuit()
         {
-            ForceFileFlush();
+            ForceFileFlush(0f);
         }
 
-        
+
         protected override void ForceFileFlush()
+        {
+            ForceFileFlush(2f);
+        }
+        protected void ForceFileFlush(float seconds_delay)
         {
             if (hasFlushedToExit) return;
             hasFlushedToExit = true;
             Task.Run(async () =>
             {
+                await Task.Delay(TimeSpan.FromSeconds(seconds_delay));
                 await obsRemote.SendCommand("StopRecording");
                 obsRemote?.Dispose();
                 //Need to send a stop recording (and close?) command over websockets here:

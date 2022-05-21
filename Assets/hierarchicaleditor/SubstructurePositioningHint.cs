@@ -116,6 +116,8 @@ public class SubstructurePositioningHint : MonoBehaviour
 
     private void AddHintRecursive(Transform copyTo, Transform copyFrom)
     {
+        // don't copy inactive meshes.
+        if (!copyFrom.gameObject.activeInHierarchy) return;
         // copy the mesh if there is one.
         var cfMesh = copyFrom.GetComponent<MeshFilter>();
         if (cfMesh != null)
@@ -134,6 +136,7 @@ public class SubstructurePositioningHint : MonoBehaviour
             newChild.parent = copyTo;
             newChild.localPosition = fromChild.localPosition;
             newChild.localRotation = fromChild.localRotation;
+            newChild.localScale = fromChild.localScale;
             AddHintRecursive(newChild, fromChild);
         }
     }

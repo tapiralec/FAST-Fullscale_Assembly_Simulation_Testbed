@@ -61,6 +61,7 @@ namespace PlayStructure
 
                 currentAP = ap;
                 ap.DoPartialLock(this);
+                if (turnHint != null) turnHint.SetActive(true);
             }
         }
 
@@ -111,6 +112,7 @@ namespace PlayStructure
         private Screwdriver heldScrewdriver;
         private int animPhase = 0;
         [SerializeField] private float[] animationSpeeds = { 0.2f, 0.2f, 0.2f };
+        [SerializeField] private GameObject turnHint;
         private float currentTimer = 0f;
         private Quaternion initialLocalRotation;
         private Vector3 initialLocalPosition;
@@ -185,9 +187,9 @@ namespace PlayStructure
                         //Debug.Log("Animating screw turn");
                         // Turn the screwdriver and the screw
                         transform.localPosition = Vector3.Lerp(initialLocalPosition, Vector3.zero,
-                            currentTimer / animationSpeeds[2]);
+                            currentTimer / animationSpeeds[1]);
                         transform.localRotation = Quaternion.Lerp(initialLocalRotation,
-                            Quaternion.Euler(0f, 0f, 180f), currentTimer / animationSpeeds[2]);
+                            Quaternion.Euler(0f, 0f, 180f), currentTimer / animationSpeeds[1]);
                         if (currentTimer > animationSpeeds[1])
                         {
                             //Debug.Log("Screw turned now");
@@ -196,6 +198,7 @@ namespace PlayStructure
                             transform.localPosition = Vector3.zero;
                             transform.localRotation = Quaternion.Euler(0f, 0f, 180f);
                             animatedKey.transform.parent = null;
+                            if (turnHint != null) turnHint.SetActive(false);
                         }
                         break;
                     case 3:
