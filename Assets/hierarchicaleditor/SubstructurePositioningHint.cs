@@ -117,7 +117,7 @@ public class SubstructurePositioningHint : MonoBehaviour
     private void AddHintRecursive(Transform copyTo, Transform copyFrom)
     {
         // don't copy inactive meshes.
-        if (!copyFrom.gameObject.activeInHierarchy) return;
+        if (!copyFrom.gameObject.activeSelf) return;
         // copy the mesh if there is one.
         var cfMesh = copyFrom.GetComponent<MeshFilter>();
         if (cfMesh != null)
