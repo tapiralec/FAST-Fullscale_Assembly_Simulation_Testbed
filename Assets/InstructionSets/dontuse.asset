@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9aaabbbf9fc684c9bd8f615e36071e, type: 3}
+  m_Name: dontuse
+  m_EditorClassIdentifier: 
+  _mInstructions:
+  - name: Attach C_TEE_9[2] to PIPE_8[1]
+    toAttach: 4
+    toAttachPointIndex: 2
+    toAttach_rotation: {x: -0.7071067, y: -0.70710677, z: -0.0000000016932962, w: -0.00000003260196}
+    toAttach_color: 0
+    toID: 9
+    fromAttach: 0
+    fromAttachPointIndex: 1
+    fromAttach_rotation: {x: 0.7071067, y: 0.70710677, z: 0.0000000016932962, w: -0.00000003260196}
+    fromID: 8

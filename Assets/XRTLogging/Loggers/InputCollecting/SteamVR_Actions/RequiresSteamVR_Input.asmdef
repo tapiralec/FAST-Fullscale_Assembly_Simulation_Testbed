@@ -1,0 +1,25 @@
+{
+    "name": "RequiresSteamVR_Actions",
+    "references": [
+        "SteamVR_Actions",
+        "SteamVR",
+        "InputCollectors"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "HAS_STEAMVR"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.valvesoftware.unity.openvr",
+            "expression": "",
+            "define": "HAS_STEAMVR"
+        }
+    ],
+    "noEngineReferences": false
+}

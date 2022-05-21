@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9aaabbbf9fc684c9bd8f615e36071e, type: 3}
+  m_Name: Proposed A
+  m_EditorClassIdentifier: 
+  _mInstructions:
+  - name: Attach PIPE_0[1] to C_TEE_7[1]
+    toAttach: 0
+    toAttachPointIndex: 1
+    toAttach_rotation: {x: 0.70710677, y: -0.70710677, z: -0.000000030908645, w: 0.00000003090862}
+    toAttach_color: 1
+    toID: 0
+    fromAttach: 4
+    fromAttachPointIndex: 1
+    fromAttach_rotation: {x: 0.70710677, y: -0.70710677, z: -0.000000030908645, w: 0.00000003090862}
+    fromID: 7
+  - name: Attach PIPE_8[1] to C_TEE_7[0]
+    toAttach: 0
+    toAttachPointIndex: 1
+    toAttach_rotation: {x: -0.7071068, y: -0.7071068, z: 0.000000030908637, w: -0.00000003090862}
+    toAttach_color: 2
+    toID: 8
+    fromAttach: 4
+    fromAttachPointIndex: 0
+    fromAttach_rotation: {x: 0.7071068, y: 0.7071068, z: -0.000000030908637, w: -0.00000003090862}
+    fromID: 7
+  - name: Attach PIPE_6[1] to C_TEE_7[2]
+    toAttach: 0
+    toAttachPointIndex: 1
+    toAttach_rotation: {x: 0.99999994, y: -0.000000043711395, z: -0.0000000842937, w: 3.4785705e-14}
+    toAttach_color: 3
+    toID: 6
+    fromAttach: 4
+    fromAttachPointIndex: 2
+    fromAttach_rotation: {x: 0.99999994, y: -0.000000043711395, z: -0.0000000842937, w: 3.4785705e-14}
+    fromID: 7
+  - name: Attach C_ELBOW_10[0] to PIPE_6[0]
+    toAttach: 3
+    toAttachPointIndex: 0
+    toAttach_rotation: {x: -1, y: 0.00000004371139, z: 0.000000084293696, w: 3.453483e-14}
+    toAttach_color: 0
+    toID: 10
+    fromAttach: 0
+    fromAttachPointIndex: 0
+    fromAttach_rotation: {x: 1, y: -0.00000004371139, z: -0.000000084293696, w: 3.453483e-14}
+    fromID: 6
+  - name: Attach PIPE_1[0] to C_ELBOW_10[1]
+    toAttach: 0
+    toAttachPointIndex: 0
+    toAttach_rotation: {x: 0.0000000014614976, y: 1, z: 1.7763568e-15, w: -0.00000008687566}
+    toAttach_color: 1
+    toID: 1
+    fromAttach: 3
+    fromAttachPointIndex: 1
+    fromAttach_rotation: {x: 0.0000000014614976, y: 1, z: 1.7763568e-15, w: -0.00000008687566}
+    fromID: 10
+  - name: Attach C_TEE_9[0] to PIPE_1[1]
+    toAttach: 4
+    toAttachPointIndex: 0
+    toAttach_rotation: {x: 0.7071068, y: -0.7071068, z: -0.00000003245671, w: 0.00000002127072}
+    toAttach_color: 0
+    toID: 9
+    fromAttach: 0
+    fromAttachPointIndex: 1
+    fromAttach_rotation: {x: -0.7071068, y: 0.7071068, z: 0.00000003245671, w: 0.00000002127072}
+    fromID: 1
+  - name: Attach PIPE_4[0] to C_TEE_9[1]
+    toAttach: 0
+    toAttachPointIndex: 0
+    toAttach_rotation: {x: -1.2434498e-14, y: 1, z: 9.769963e-15, w: -0.000000036500253}
+    toAttach_color: 1
+    toID: 4
+    fromAttach: 4
+    fromAttachPointIndex: 1
+    fromAttach_rotation: {x: -1.2434498e-14, y: 1, z: 9.769963e-15, w: -0.000000036500253}
+    fromID: 9
+  - name: Attach PIPE_12[1] to C_TEE_9[2]
+    toAttach: 0
+    toAttachPointIndex: 1
+    toAttach_rotation: {x: -1, y: 0.00000004071071, z: 0.00000004071074, w: 0.00000001090842}
+    toAttach_color: 2
+    toID: 12
+    fromAttach: 4
+    fromAttachPointIndex: 2
+    fromAttach_rotation: {x: 1, y: -0.00000004071071, z: -0.00000004071074, w: 0.00000001090842}
+    fromID: 9
+  - name: Attach C_ELBOW_5[1] to PIPE_12[0]
+    toAttach: 3
+    toAttachPointIndex: 1
+    toAttach_rotation: {x: 0.7071068, y: 0.7071068, z: -0.00000002618754, w: -0.000000019100996}
+    toAttach_color: 0
+    toID: 5
+    fromAttach: 0
+    fromAttachPointIndex: 0
+    fromAttach_rotation: {x: 0.7071068, y: 0.7071068, z: -0.00000002618754, w: -0.000000019100996}
+    fromID: 12
+  - name: Attach PIPE_11[0] to C_ELBOW_5[0]
+    toAttach: 0
+    toAttachPointIndex: 0
+    toAttach_rotation: {x: 0.0000000014614825, y: -1, z: -3.996803e-14, w: -0.00000008687566}
+    toAttach_color: 4
+    toID: 11
+    fromAttach: 3
+    fromAttachPointIndex: 0
+    fromAttach_rotation: {x: -0.0000000014614825, y: 1, z: 3.996803e-14, w: -0.00000008687566}
+    fromID: 5
+  - name: Attach C_TEE_3[0] to PIPE_11[1]
+    toAttach: 4
+    toAttachPointIndex: 0
+    toAttach_rotation: {x: 0.7071068, y: 0.7071068, z: -0.00000004854712, w: -0.00000006730943}
+    toAttach_color: 0
+    toID: 3
+    fromAttach: 0
+    fromAttachPointIndex: 1
+    fromAttach_rotation: {x: 0.7071068, y: 0.7071068, z: -0.00000004854712, w: -0.00000006730943}
+    fromID: 11
+  - name: Attach PIPE_2[1] to C_TEE_3[2]
+    toAttach: 0
+    toAttachPointIndex: 1
+    toAttach_rotation: {x: 0.70710677, y: -0.70710677, z: -0.000000014217054, w: 0.000000052222834}
+    toAttach_color: 2
+    toID: 2
+    fromAttach: 4
+    fromAttachPointIndex: 2
+    fromAttach_rotation: {x: 0.70710677, y: -0.70710677, z: -0.000000014217054, w: 0.000000052222834}
+    fromID: 3

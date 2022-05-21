@@ -1,0 +1,17 @@
+{
+    "name": "RequiresXRTLogging",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a57993c068ca9d04ab6adac27b04d3ff",
+        "GUID:72b9e884b5c0b8742b3187376a4cc97a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

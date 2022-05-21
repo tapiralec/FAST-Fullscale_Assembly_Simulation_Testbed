@@ -1,0 +1,15 @@
+{
+    "name": "ScreenRecording_OBS",
+    "references": [
+        "GUID:a57993c068ca9d04ab6adac27b04d3ff"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

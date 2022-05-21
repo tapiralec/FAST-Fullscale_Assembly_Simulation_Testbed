@@ -1,0 +1,123 @@
+{
+  "bindings": {
+    "/actions/buggy": {
+      "chords": [],
+      "poses": [],
+      "haptics": [],
+      "sources": [],
+      "skeleton": []
+    },
+    "/actions/default": {
+      "chords": [],
+      "poses": [],
+      "haptics": [],
+      "sources": [],
+      "skeleton": []
+    },
+    "/actions/platformer": {
+      "chords": [],
+      "poses": [],
+      "haptics": [],
+      "sources": [],
+      "skeleton": []
+    },
+    "/actions/xrtlogging": {
+      "chords": [],
+      "poses": [],
+      "haptics": [],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/system",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/xrtlogging/in/system_click_bool"
+            },
+            "touch": {
+              "output": "/actions/xrtlogging/in/system_touch_bool"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/xrtlogging/in/trigger_click_bool"
+            },
+            "pull": {
+              "output": "/actions/xrtlogging/in/trigger_pull_float"
+            },
+            "touch": {
+              "output": "/actions/xrtlogging/in/trigger_touch_bool"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/joystick",
+          "mode": "joystick",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/xrtlogging/in/joystick_click_bool"
+            },
+            "position": {
+              "output": "/actions/xrtlogging/in/joystick_position_vector2"
+            },
+            "touch": {
+              "output": "/actions/xrtlogging/in/joystick_touch_bool"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "trigger",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/xrtlogging/in/grip_click_bool"
+            },
+            "pull": {
+              "output": "/actions/xrtlogging/in/grip_pull_float"
+            },
+            "touch": {
+              "output": "/actions/xrtlogging/in/grip_click_bool"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/x",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/xrtlogging/in/buttonx_click_bool"
+            },
+            "touch": {
+              "output": "/actions/xrtlogging/in/buttonx_touch_bool"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/y",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/xrtlogging/in/buttony_click_bool"
+            },
+            "touch": {
+              "output": "/actions/xrtlogging/in/buttony_touch_bool"
+            }
+          }
+        }
+      ],
+      "skeleton": []
+    }
+  },
+  "controller_type": "oculus_touch",
+  "description": "",
+  "name": "oculus_touch"
+}

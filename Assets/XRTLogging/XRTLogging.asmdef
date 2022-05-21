@@ -1,0 +1,17 @@
+{
+    "name": "XRTLogging",
+    "references": [
+        "SteamVR",
+        "Unity.XR.OpenVR",
+        "InputCollectors"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

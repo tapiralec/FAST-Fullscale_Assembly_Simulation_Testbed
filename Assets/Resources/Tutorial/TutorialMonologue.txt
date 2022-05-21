@@ -1,0 +1,32 @@
+Stand in front of the table
+Move your left hand so that the controller is touching the T-connector on your left.
+Grab the T-connector by pressing and holding the trigger button with your left index finger.
+While holding the trigger button, move the T-connector to the middle of the table by moving your left hand.
+Place the T-connector by releasing the trigger button with your left index finger.
+Move your right hand so that the controller is touching the blue pipe on your right.
+Grab the blue pipe by pressing and holding the trigger button with your right index finger.
+While holding the trigger button, move the blue pipe to align it with the T-connector by moving your right hand.
+Place the blue pipe by releasing the trigger button with your right index finger.
+Move your right hand so that the controller is touching the left screw.
+Grab the left screw by pressing and holding the trigger button with your right index finger.
+While holding the trigger button, move the screw to align it with the hole by moving your right hand.
+Place the screw by releasing the trigger button with your right index finger.
+Move your right hand so that the controller is touching the key in front of you.
+Grab the key by pressing and holding the trigger button with your right index finger.
+While holding the trigger button, move the key to align it with the screw by moving your right hand.
+While holding the trigger button, move the key to the front of the table by moving your right hand.
+Place the key by releasing the trigger button with your right index finger.
+Move your right hand so that the controller is touching the yellow pipe on your right.
+Grab the yellow pipe by pressing and holding the trigger button with your right index finger.
+While holding the trigger button, move the yellow pipe to align it with the T-connector by moving your right hand.
+Place the yellow pipe by releasing the trigger button with your right index finger.
+Move your right hand so that the controller is touching the remaining screw.
+Grab the screw by pressing and holding the trigger button with your right index finger.
+While holding the trigger button, move the screw to align it with the hole by moving your right hand.
+Place the screw by releasing the trigger button with your right index finger.
+Move your right hand so that the controller is touching the key in front of you.
+Grab the key by pressing and holding the trigger button with your right index finger.
+While holding the trigger button, move the key to align it with the screw by moving your right hand.
+While holding the trigger button, move the key to the front of the table by moving your right hand.
+Place the key by releasing the trigger button with your right index finger.
+Congratulations! You now know how to assemble tubes in virtual reality!

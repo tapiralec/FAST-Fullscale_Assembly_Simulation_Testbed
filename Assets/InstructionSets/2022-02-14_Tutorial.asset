@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9aaabbbf9fc684c9bd8f615e36071e, type: 3}
+  m_Name: 2022-02-14_Tutorial
+  m_EditorClassIdentifier: 
+  _mInstructions:
+  - name: Attach PIPE_0[0] to C_TEE_2[1]
+    toAttach: 0
+    toAttachPointIndex: 0
+    toAttach_rotation: {x: 0.70710677, y: -0.70710677, z: -0.00000008052227, w: 0.00000006342601}
+    toAttach_color: 4
+    toID: 0
+    fromAttach: 4
+    fromAttachPointIndex: 1
+    fromAttach_rotation: {x: 0.70710677, y: -0.70710677, z: -0.00000008052227, w: 0.00000006342601}
+    fromID: 2
+  - name: Attach PIPE_1[1] to C_TEE_2[0]
+    toAttach: 0
+    toAttachPointIndex: 1
+    toAttach_rotation: {x: 0.7071068, y: 0.70710677, z: -0.000000067276225, w: -0.000000021011898}
+    toAttach_color: 2
+    toID: 1
+    fromAttach: 4
+    fromAttachPointIndex: 0
+    fromAttach_rotation: {x: 0.7071068, y: 0.70710677, z: -0.000000067276225, w: -0.000000021011898}
+    fromID: 2
