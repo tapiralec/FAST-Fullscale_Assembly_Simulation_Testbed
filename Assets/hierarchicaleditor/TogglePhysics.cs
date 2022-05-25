@@ -9,7 +9,7 @@ public class TogglePhysics : MonoBehaviour
 
 
     public bool physicsOffShortlyAfterStart = true;
-    public float timeToWait = 0.2f;
+    public float timeToWait = 0.1f;
     private bool hasBeenToldToStayOn = false;
     private List<Collider> collidersToToggle = new List<Collider>();
     private Interactable interactable;

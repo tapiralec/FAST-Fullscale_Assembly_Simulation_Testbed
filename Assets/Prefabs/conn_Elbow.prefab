@@ -267,6 +267,9 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+  OnHandHover:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &9092315467619656404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minHeightOfCenter: 0.7
   timeUnderMinToReset: 1
-  OnlyCountIfNotHeld: 1
+  onlyCountIfNotHeld: 1
   startRotation: {x: 0, y: 0, z: 0, w: 0}
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &5855275712701580714
@@ -391,4 +394,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicsOffShortlyAfterStart: 1
-  timeToWait: 0.2
+  timeToWait: 0.1
+  toggleCollidersAlso: 0

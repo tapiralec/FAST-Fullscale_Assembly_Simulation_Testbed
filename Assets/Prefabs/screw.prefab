@@ -214,6 +214,9 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+  OnHandHover:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &6178803503584002856
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -319,11 +322,14 @@ MonoBehaviour:
     _mOtherBuildingPieceAttachPointIndex: 0
     thisToOther: {x: 0, y: 0, z: 0, w: 0}
     configurableJoint: {fileID: 0}
+  suspendInteractionCuesOnScrewInAnimation: 1
+  resumeInteractionCuesOnScrewInAnimationComplete: 1
   animatedKeyPrefab: {fileID: 1302060206010596362, guid: 40243d8b76514494c95cc622c3fe68ca, type: 3}
   animationSpeeds:
   - 0.2
   - 0.4
   - 0.2
+  turnHint: {fileID: 0}
 --- !u!114 &2588990606180217032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minHeightOfCenter: 0.7
   timeUnderMinToReset: 1
-  OnlyCountIfNotHeld: 1
+  onlyCountIfNotHeld: 1
   startRotation: {x: 0, y: 0, z: 0, w: 0}
   startPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &8096492632282752737
@@ -354,4 +360,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   physicsOffShortlyAfterStart: 1
-  timeToWait: 0.2
+  timeToWait: 0.1
+  toggleCollidersAlso: 0
