@@ -73,6 +73,7 @@ public class PlayInstructions : Singleton<PlayInstructions>
     
     [SerializeField] private AudioSource instructionAudioSource;
     [SerializeField] private AudioClip connectClip;
+    [SerializeField] private bool playOnPresentPieces = true;
     [SerializeField] private bool playOnPipeConnect = true;
     [SerializeField] private bool playOnScrewConnect = true;
     [SerializeField] private bool playOnScrewTurn = true;
@@ -132,6 +133,7 @@ public class PlayInstructions : Singleton<PlayInstructions>
         }
         ExpandSavedInstruction(0);
         subStepProgress?.Invoke(0,currentSubStepState);
+        if (instructionAudioSource != null && connectClip != null && playOnPresentPieces) instructionAudioSource.PlayOneShot(connectClip);
         if (substructurePositioningHint != null) substructurePositioningHint.gameObject.SetActive(true);
 
         foreach (var key in buildingPieces.Keys)
