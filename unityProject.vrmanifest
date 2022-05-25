@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.test_tubes.exe",
+      "app_key": "application.generated.unity.fab.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\Alec\\Documents\\GitHub\\test_tubes\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\Alec\\Downloads\\Full-scaleAssemblyBenchmark-AddingVR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "test_tubes [Testing]"
+          "name": "FAB [Testing]"
         }
       }
     }
